@@ -13,12 +13,24 @@ class Perro():
         if self.peso>=8:
             print('GUAU, GUAU, GUAU')
         else:
-            print('guau, guau')
+            print('guau, guau')          
+    
+    def __str__(self):
+        return 'Perro {}, e: {}, p: {}'.format(nombre, edad, peso)
+        return 'soy el perro {}'.format(self.nombre)
+               
+# Subclase & Herencia
+class PerroAsistencia(Perro):
+    def __init__(self, nombre, edad, pero, amo):
+        Perro.__init__(self, nombre, edad, peso, amo)
+        self.amo = amo
+        
+# Funcion para devolver una cadena cuando digamos PRINT
 
     def __str__(self):
-        return "soy el perro {}".format(self.nombre)
+        return 'Perro de asistencia de {}'.format(self.amo)
     
-
+    
 
 '''
     def __str__(self):
