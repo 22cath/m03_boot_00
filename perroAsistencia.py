@@ -1,4 +1,3 @@
-
 class Perro():
     def __init__(self, n, e, p):
         self.nombre = n
@@ -13,11 +12,10 @@ class Perro():
     
     def __str__(self):
         return 'Perro {}, e: {}, p: {}'.format(self.nombre, self.edad, self.peso)
-        return 'soy el perro {}'.format(self.nombre)
                
 class PerroAsistencia(Perro):
     def __init__(self, nombre, edad, peso, amo):
-        Perro.__init__(self, nombre, edad, amo)
+        Perro.__init__(self, nombre, edad, peso)
         self.amo = amo
         self.trabajando = False
        
@@ -32,6 +30,8 @@ class PerroAsistencia(Perro):
             print('shhht, no puedo ladrar')
         else:
             Perro.ladrar(self)
+
+            
      
      
             
