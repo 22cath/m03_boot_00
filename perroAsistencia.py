@@ -32,7 +32,18 @@ class PerroAsistencia(Perro):
             Perro.ladrar(self)
 
             
-     
+    def trabajando(self, valor=None):
+        if valor == None:
+            return self.__trabajando
+        else:
+            self.__trabajando = valor
+
+class Timido():
+    def __init__(self, nombre):
+        self.__nombre = nombre
+    
+    def preguntarNombreConCuidado(self):
+        return self.__nombre
      
             
             
